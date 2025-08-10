@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内服薬中止日確認</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>内服薬中止日確認</h1>
+        <form id="drug-form">
+            <div class="form-group">
+                <label for="drug-name">薬剤名:</label>
+                <input type="text" id="drug-name" name="drug_name" placeholder="例: アスピリン" required>
+            </div>
+            <div class="form-group">
+                <label for="ope-day">手術予定日:</label>
+                <input type="date" id="ope-day" name="ope_day" required>
+            </div>
+            <button type="submit" id="check-button">確認する</button>
+        </form>
+        <div id="loading" class="hidden">
+            <p>確認中...</p>
+        </div>
+        <div id="result-container">
+            <h2>確認結果</h2>
+            <ul id="result-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
